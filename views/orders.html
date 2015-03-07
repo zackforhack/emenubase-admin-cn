@@ -1,10 +1,10 @@
 <div class="col-sm-11 col-sm-offset-1">
-	<h3 class="page-header">Orders</h3>
+	<h3 class="page-header">订单</h3>
 	<div class="panel panel-default" ng-class="{'panel-success':order.confirmed}" ng-repeat="(key,order) in orders">
 		<div class="panel-heading clearfix">
-			<h3 class="panel-title pull-left">Telephone:{{order.tel}} Name: {{order.clientname}} Address: {{order.clientaddress}}</h3>
-			<button class="btn btn-default btn-sm pull-right" ng-hide="order.confirmed" ng-click="confirmOrder(key, this.order)">Confirm Order</button>
-			<button class="btn btn-danger btn-sm pull-right" ng-show="order.confirmed" ng-click="deleteOrder(key, this.order)">Delete Order</button>
+			<h3 class="panel-title pull-left">电话:{{order.tel}} 名字: {{order.clientname}} 地址: {{order.clientaddress}}</h3>
+			<button class="btn btn-default btn-sm pull-right" ng-hide="order.confirmed" ng-click="confirmOrder(key, this.order)">确认订单</button>
+			<button class="btn btn-danger btn-sm pull-right" ng-show="order.confirmed" ng-click="deleteOrder(key, this.order)">删除订单</button>
 		</div>
 		<ul class="list-group">
 			<li class="list-group-item" ng-repeat="item in order.order">
@@ -13,7 +13,7 @@
 			</li>
 		</ul>
 		<div class="panel-heading clearfix">
-			<span class="pull-right">Total: ${{order.total | number:2}}</span>
+			<span class="pull-right">总计: ${{order.total | number:2}}</span>
 		</div>
 	</div>
 </div>

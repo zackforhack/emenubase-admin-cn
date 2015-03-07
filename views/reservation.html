@@ -1,14 +1,14 @@
 <div class="col-sm-11 col-sm-offset-1">
-	<h3 class="page-header">Reservation</h3>
+	<h3 class="page-header">预定</h3>
 	<div class="panel panel-default" ng-repeat="res in reservation">
 		<div class="panel-heading clearfix">			
-			<button class="btn btn-danger btn-sm pull-right" ng-click="deleteReservation(key)">Delete Reservation</button>
+			<button class="btn btn-danger btn-sm pull-right" ng-click="deleteReservation(key)">删除预定</button>
 		</div>
 		<ul class="list-group">
 			<li class="list-group-item">
-				<span>Name: {{res.firstName}} {{res.lastName}}</span>
-				<span>Telephone: {{res.telePhone}}</span>
-				<span>Booked Time: {{res.time.dateDropDownInput}}</span>
+				<span>名字: {{res.firstName}} {{res.lastName}}</span>
+				<span>电话: {{res.telePhone}}</span>
+				<span>预定时间: {{res.time.dateDropDownInput}}</span>
 
 			</li>
 		</ul>

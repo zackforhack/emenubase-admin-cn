@@ -1,6 +1,6 @@
     <div class="col-sm-11 col-sm-offset-1 main">
-    <button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#myModal">Add Category</button>
-    <h3 class="page-header">Categories {{numofCateg}}/4</h3>
+    <button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#myModal">增加类别</button>
+    <h3 class="page-header">类别 {{numofCateg}}/4</h3>
     <div class="row">
         <div class="col-xs-12 col-md-3" ng-repeat="(key,categ) in categories">
             <a href="" class="thumbnail category-thumbnail" data-toggle="modal" data-target="#myModal1" ng-click="saveCateg(key, this.categ)">
@@ -17,22 +17,22 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Add Category</h4>
+                <h4 class="modal-title" id="myModalLabel">增加类别</h4>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>Category Name</label>
+                    <label>类别名称</label>
                     <input class="form-control" ng-model="categoryName" placeholder="Category Name">
                 </div>
                 <div class="form-group">
-                    <label>Category Image (under 100KB, 50KB recommended)</label>
+                    <label>类别照片 (少于 100KB, 50KB 推荐大小)</label>
                     <input type="file" ng-model="image" name="file" base-sixty-four-input>
                 </div>
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" ng-click="addCategory()" ng-disabled="canUploadCateg()" data-dismiss="modal">Add Category</button>
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" ng-click="addCategory()" ng-disabled="canUploadCateg()" data-dismiss="modal">增加类别</button>
             </div>
         </div>
     </div>
@@ -43,26 +43,26 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Update Category</h4>
+                <h4 class="modal-title" id="myModalLabel">更新类别</h4>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>Category Name</label>
+                    <label>类别名称</label>
                     <input class="form-control" ng-model="defaultCateg.name">
                 </div>
                 <div class="form-group">
-                    <label>Category Image:</label>
+                    <label>类别图片:</label>
                     <img ng-src="data:{{defaultCateg.image.filetype}};base64,{{defaultCateg.image.base64}}" alt=""  style="max-height: 175px">
                 </div>
                 <div class="form-group">
-                    <label>Update Category Image (under 100KB, 50KB recommended)</label>
+                    <label>更新类别图片 (少于 100KB, 50KB 推荐大小)</label>
                     <input type="file" ng-model="defaultCateg.image" name="file" base-sixty-four-input>
                 </div>
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" ng-click="updateCategory()" ng-disabled="canUpdateCateg()" data-dismiss="modal1">Update Category</button>
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" ng-click="updateCategory()" ng-disabled="canUpdateCateg()" data-dismiss="modal1">更新类别</button>
             </div>
         </div>
     </div>
