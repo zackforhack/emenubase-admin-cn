@@ -35,10 +35,10 @@
     <h3>增加菜单菜品</h3>
     <form name="menuForm">
         <div class="form-group">
-            <input class="form-control" type="text" ng-model="menuItem.title" placeholder="Title">
+            <input class="form-control" type="text" ng-model="menuItem.title" placeholder="名字">
         </div>
         <div class="form-group">
-            <textarea class="form-control" type="text" rows="8" ng-model="menuItem.description" placeholder="One sentense description"></textarea>
+            <textarea class="form-control" type="text" rows="8" ng-model="menuItem.description" placeholder="一句话描述 最多20个字" maxlength="10"></textarea>
         </div>
         <div class="form-group input-group">
             <div class="input-group-btn">
@@ -47,11 +47,11 @@
                   <li ng-repeat="categ in categories"><a href="" ng-click="menuItem.category = categ.name">{{categ.name}}</a></li>
                 </ul>
             </div>
-            <input class="form-control" type="text" ng-model="menuItem.category" placeholder="Category">
+            <input class="form-control" type="text" ng-model="menuItem.category" placeholder="类别">
         </div>
         <div class="form-group input-group">
             <span class="input-group-addon">$</span>
-            <input class="form-control" type="number" ng-model="menuItem.price" placeholder="Price">
+            <input class="form-control" type="number" ng-model="menuItem.price" placeholder="价格">
         </div>
         <div class="form-group">
             <label>菜品图片 (少于 100B, 50KB 推荐大小)</label>
