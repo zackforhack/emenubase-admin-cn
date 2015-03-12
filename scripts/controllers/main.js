@@ -7,6 +7,14 @@ angular.module('appApp')
         $scope.menuItems = dataSnapshot.val();
       });
 
+        $scope.numofItem = (function() {
+            var num = 0;
+            for(var item in $scope.menuItems) {
+                num++;
+            }
+            return num;
+        })();
+
     $scope.menuItemsfire = $firebase(menu);
 
 
@@ -14,6 +22,14 @@ angular.module('appApp')
     categories.on('value', function(dataSnapshot) {
         $scope.categories = dataSnapshot.val();
       });
+
+        $scope.numofCateg = (function() {
+            var num = 0;
+            for(var item in $scope.categories) {
+                num++;
+            }
+            return num;
+        })();
 
     
 
@@ -82,24 +98,6 @@ angular.module('appApp')
             if (!$scope.menuItem.title || !$scope.menuItem.description || !$scope.menuItem.category || !$scope.menuItem.price || !($scope.menuItem.image.filesize <= 100000) || !($scope.numofItem < 20))
                 return true;
         };
-
-
-    $scope.numofCateg = (function() {
-            var num = 0;
-            for(var item in $scope.categories) {
-                num++;
-            }
-            return num;
-        })();
-
-    $scope.numofItem = (function() {
-            var num = 0;
-            for(var item in $scope.menuItems) {
-                num++;
-            }
-            return num;
-        })();   
-
 
   });
 
