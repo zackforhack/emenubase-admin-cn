@@ -1,6 +1,6 @@
 <div class="col-sm-8 col-sm-offset-1 col-md-8 col-md-offset-1 main">
     <div class="page-header clearfix">
-        <h3 class="pull-left">我的菜单  {{numofItem}}/20</h3>
+        <h3 class="pull-left">我的项目  {{numofItem}}/20</h3>
         <div class="col-xs-3 pull-right" style="margin-top:25px; display:none">
             <input class="form-control input-sm search-form" ng-model="searchText" placeholder="Search">
         </div>
@@ -54,11 +54,11 @@
             <input class="form-control" type="number" ng-model="menuItem.price" placeholder="价格">
         </div>
         <div class="form-group">
-            <label>菜品图片 (少于 100B, 50KB 推荐大小)</label>
+            <label>项目图片 (少于 100B, 50KB 推荐大小)</label>
             <input type="file" ng-model="menuItem.image" name="file" base-sixty-four-input>
         </div>
     </form>
-    <p><a class="btn btn-success" ng-href="" ng-click="addItem()" ng-disabled="canUploadItem()">增加新菜品</a></p>
+    <p><a class="btn btn-success" ng-href="" ng-click="addItem()" ng-disabled="canUploadItem()">增加新项目</a></p>
 </div>
 
 
